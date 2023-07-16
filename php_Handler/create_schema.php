@@ -5,7 +5,7 @@ require_once './database_connection.php';
 // Create the database
 $sql = "CREATE DATABASE IF NOT EXISTS $database";
 if ($con->query($sql) === true) {
-    echo 'Database successfully';
+    echo 'Database successfully <br/>';
 } else {
     echo 'Database Error: ' . $con->error;
 }
@@ -32,15 +32,14 @@ $sql = "
 ";
 
 if ($con->multi_query($sql) === true) {
-    echo 'Tables successfully';
+    echo 'Tables successfully <br/>';
 } else {
     echo 'Error tables: ' . $con->error;
 }
-
 // Close the connection
 $con->close();
 
 // Redirect to another page
-header('Location: http://localhost/Assignment2_DucMinhHuynh/pages/admin.php');
+header('Location: http://localhost/Assignment2_GameChoice/pages/admin.php');
 exit();
 ?>
